@@ -9,12 +9,6 @@ module.exports = ({ env }) => ({
         api_key: env("CLOUDINARY_KEY"),
         api_secret: env("CLOUDINARY_SECRET"),
       },
-      actionOptions: {
-        upload: {
-          folder: "gurukripa", // Specify the folder in Cloudinary
-        },
-        delete: {}, // Add any delete options if needed
-      },
     },
   },
 });
