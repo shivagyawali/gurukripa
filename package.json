@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "strapi-provider-upload-cloudinary": "^3.6.11"
+  }
+}
