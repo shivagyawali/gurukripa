@@ -41,9 +41,6 @@ RUN mkdir -p /usr/src/app/server/public/uploads
 # Copy frontend build to the backend public directory
 COPY --from=frontend-builder /usr/src/app/client/dist /var/www/gurukripanepal
 
-# Copy uploaded files from the uploads directory to the backend public/uploads directory
-COPY ./etc/uploads /usr/src/app/server/public/uploads
-
 # Expose port 1337 for the Strapi server
 EXPOSE 1337
 
