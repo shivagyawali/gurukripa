@@ -110,7 +110,10 @@ const ThirdEyeRegistrationForm = () => {
       formDataToSend.append("file", pdfData.pdfDataUri);
       formDataToSend.append("fileName", pdfData.pdfFileName);
       formDataToSend.append("personName", formData.fullName);
-      formDataToSend.append("subject", "Inner Healing सदस्यता फारम");
+      formDataToSend.append(
+        "subject",
+        "Mantra sadhana/Inner healing सदस्यता फारम"
+      );
 
       for (let key in formData) {
         formDataToSend.append(key, formData[key]);
@@ -152,7 +155,7 @@ const ThirdEyeRegistrationForm = () => {
             <br />
             Udayapur, Gaighat
             <br />
-            Inner Healing
+            Mantra sadhana/inner healing
           </h1>
 
           <div className="relative h-24 w-24 border border-black flex items-center justify-center">
