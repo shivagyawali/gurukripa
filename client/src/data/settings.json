@@ -1,0 +1,25 @@
+{
+  "siteTitle": "Guru Kripa Foundation",
+  "phoneNumber": "+977 985-1050785",
+  "email": "gurukirpafoundation@gmail.com",
+  "addresses": [
+    {
+      "label": "Location",
+      "city": "Udayapur",
+      "street": "",
+      "state": "Gaighat",
+      "postalCode": "56300",
+      "country": "Nepal"
+    }
+  ],
+  "socialMedia": {
+    "facebook": "https://www.facebook.com/groups/335723423948776",
+    "website": "https://gurukirpafoundation.com"
+  },
+  "logoUrl": "/img/logo.png",
+  "faviconUrl": "/img/favicon.ico",
+  "description": "In the fast-paced whirlwind of modern life, finding solace and connection with the spiritual realm becomes imperative. At Guru Kripa Foundation, we extend a warm invitation to seekers and wanderers alike, beckoning you to embark on a profound journey of self-discovery, enlightenment, and spiritual rejuvenation. Rooted in the spiritual tapestry of Nepal, our foundation stands as a beacon of timeless wisdom, offering a myriad of transformative programs meticulously curated to guide you along the path of spiritual evolution. ",
+  "keywords": ["website", "products", "services", "contact"],
+  "author": "Shiva Gyawali",
+  "yearFounded": 2070
+}

@@ -1,0 +1,215 @@
+
+ [
+    {
+      "title": "Guru Sadhana – Embracing Divine Wisdom",
+      "image": "./news/2.png",
+      "description": "Guru Sadhana is considered a fundamental spiritual discipline that forms the basis for other practices.",
+      "points": [
+        {
+          "number": "01",
+          "title": "Foundational spiritual practice",
+          "description": "Guru Sadhana is considered a fundamental spiritual discipline."
+        },
+        {
+          "number": "02",
+          "title": "Gateway to divine wisdom",
+          "description": "Through Guru Sadhana, individuals open themselves to receive divine wisdom and spiritual insights."
+        },
+        {
+          "number": "03",
+          "title": "Immersion in sacred rituals and teachings",
+          "description": "The practice involves engaging in sacred rituals and receiving teachings from spiritual guides to deepen spiritual connection."
+        },
+        {
+          "number": "04",
+          "title": "Foster a deep connection with your inner self",
+          "description": "Guru Sadhana encourages individuals to establish a profound connection with their inner selves, fostering self-awareness and introspection."
+        }
+      ]
+    },
+    {
+      "title": "Aura Meditation – A Symphony of Energies",
+      "description": "Aura Meditation is described as a transformative journey that aligns and balances the energies of the spiritual and physical aspects of an individual.",
+      "image": "./news/1.png",
+      "points": [
+        {
+          "number": "01",
+          "title": "Mystical journey harmonizing spiritual and physical being",
+          "description": "Aura Meditation is described as a transformative journey that aligns and balances the energies of the spiritual and physical aspects of an individual."
+        },
+        {
+          "number": "02",
+          "title": "Cleansing and strengthening your aura",
+          "description": "The practice involves techniques to purify and strengthen the auric field, promoting a sense of balance and vitality."
+        },
+        {
+          "number": "03",
+          "title": "Gateway to heightened states of consciousness",
+          "description": "Aura Meditation serves as a gateway to states of heightened awareness, facilitating a deeper understanding of oneself and the surrounding energies."
+        },
+        {
+          "number": "04",
+          "title": "Promotes holistic well-being",
+          "description": "By harmonizing energies, Aura Meditation contributes to overall well-being, addressing physical, mental, and spiritual dimensions."
+        }
+      ]
+    },
+    {
+      "title": "Samriddhi Sadhana – Unveiling Abundance",
+      "description": "Samriddhi Sadhana aims to open the doors to spiritual prosperity by aligning one's energies with higher frequencies.",
+      "image": "./news/3.png",
+      "points": [
+        {
+          "number": "01",
+          "title": "Unlock gates to spiritual prosperity",
+          "description": "Samriddhi Sadhana aims to open the doors to spiritual prosperity by aligning one's energies with higher frequencies."
+        },
+        {
+          "number": "02",
+          "title": "Align energies with universal flow of abundance",
+          "description": "Through sacred teachings, individuals learn to synchronize their energies with the universal flow of abundance."
+        },
+        {
+          "number": "03",
+          "title": "Invite prosperity into every facet of life",
+          "description": "The practice is designed to attract prosperity and fulfillment into various aspects of life, fostering a sense of abundance."
+        },
+        {
+          "number": "04",
+          "title": "Delve into sacred teachings for abundance",
+          "description": "Samriddhi Sadhana involves exploring and delving into sacred teachings that guide individuals on the path to abundance."
+        }
+      ]
+    },
+    {
+      "title": "Sai Sadhana – Devotion in Motion",
+      "description": "Sai Sadhana is a practice focused on establishing a deep connection with the divine grace of Sai Baba, a revered spiritual figure.",
+      "image": "./news/4.png",
+      "points": [
+        {
+          "number": "01",
+          "title": "Connect with divine grace of Sai Baba",
+          "description": "Sai Sadhana is a practice focused on establishing a deep connection with the divine grace of Sai Baba, a revered spiritual figure."
+        },
+        {
+          "number": "02",
+          "title": "Transformative practice nurturing spiritual growth",
+          "description": "The practice is transformative, nurturing spiritual growth and evolution on the path of devotion."
+        },
+        {
+          "number": "03",
+          "title": "Create a sacred space for communion",
+          "description": "Sai Sadhana involves creating a sacred and devotional space for communion with the benevolent energies associated with Sai Baba."
+        },
+        {
+          "number": "04",
+          "title": "Experience benevolent energies of revered spiritual master",
+          "description": "Practitioners of Sai Sadhana aim to experience and embody the benevolent energies of Sai Baba for spiritual development."
+        }
+      ]
+    },
+    {
+      "title": "Third Eye Meditation (1st and 2nd Level) – Journey Within",
+      "description": "Third Eye Meditation is described as a deep and transformative journey within oneself, exploring the depths of one's consciousness.",
+      "image": "./news/5.png",
+      "points": [
+        {
+          "number": "01",
+          "title": "Profound journey of self-discovery",
+          "description": "Third Eye Meditation is described as a deep and transformative journey within oneself, exploring the depths of one's consciousness."
+        },
+        {
+          "number": "02",
+          "title": "Unveil mysteries of consciousness",
+          "description": "Practitioners aim to unlock and reveal the mysteries of consciousness, gaining insights and clarity about their existence."
+        },
+        {
+          "number": "03",
+          "title": "Enhance intuitive abilities",
+          "description": "The meditation program is designed to enhance intuitive abilities, allowing individuals to tap into their inner wisdom and heightened perception."
+        },
+        {
+          "number": "04",
+          "title": "Traverse through progressive levels of awakening",
+          "description": "Third Eye Meditation unfolds in progressive levels, guiding practitioners through stages of spiritual awakening and self-realization."
+        }
+      ]
+    },
+    {
+      "title": "Sukshma Samadhi Sadhana – The Subtleties of Meditation",
+      "description": "Sukshma Samadhi Sadhana encourages individuals to immerse themselves in the subtle aspects of meditation, focusing on nuanced and refined experiences.",
+      "image": "./news/2.png",
+      "points": [
+        {
+          "number": "01",
+          "title": "Immerse in subtleties of meditation",
+          "description": "Sukshma Samadhi Sadhana encourages individuals to immerse themselves in the subtle aspects of meditation, focusing on nuanced and refined experiences."
+        },
+        {
+          "number": "02",
+          "title": "Refine awareness",
+          "description": "The practice aims to refine and heighten awareness, allowing individuals to delve into deeper states of meditation and consciousness."
+        },
+        {
+          "number": "03",
+          "title": "Guide towards profound states of meditation",
+          "description": "Sukshma Samadhi Sadhana serves as a guide towards achieving profound states of meditation, promoting inner stillness and tranquility."
+        },
+        {
+          "number": "04",
+          "title": "Attain inner stillness",
+          "description": "Practitioners strive to attain a state of inner stillness, experiencing a calm and peaceful mind through the subtleties of meditation."
+        }
+      ]
+    },
+    {
+      "title": "Chakra Healing – Harmonizing Energies",
+      "description": "Chakra Healing involves exploring and experiencing the ancient art of balancing and harmonizing the body's energy centers.",
+      "image": "./news/4.png",
+      "points": [
+        {
+          "number": "01",
+          "title": "Experience ancient art of Chakra Healing",
+          "description": "Chakra Healing involves exploring and experiencing the ancient art of balancing and harmonizing the body's energy centers."
+        },
+        {
+          "number": "02",
+          "title": "Balance and align energy centers",
+          "description": "The practice focuses on bringing balance and alignment to the various chakras, contributing to overall physical, mental, and spiritual harmony."
+        },
+        {
+          "number": "03",
+          "title": "Restore harmony to physical, mental, and spiritual well-being",
+          "description": "By addressing imbalances in the energy centers, Chakra Healing aims to restore harmony to the entire well-being of an individual."
+        }
+      ]
+    },
+    {
+      "title": "Stress Release Program – Serenity Unleashed",
+      "description": "The Stress Release Program is designed as a journey toward achieving serenity, providing tools and techniques to navigate the challenges of daily life.",
+      "image": "./news/1.png",
+      "points": [
+        {
+          "number": "01",
+          "title": "Journey of serenity",
+          "description": "The Stress Release Program is designed as a journey toward achieving serenity, providing tools and techniques to navigate the challenges of daily life."
+        },
+        {
+          "number": "02",
+          "title": "Dissolve burdens of daily life",
+          "description": "The program helps individuals dissolve the burdens and stresses associated with daily life, promoting a sense of relief and relaxation."
+        },
+        {
+          "number": "03",
+          "title": "Release stress and tension",
+          "description": "Through various practices, participants learn to release accumulated stress and tension, fostering a state of mental and emotional ease."
+        },
+        {
+          "number": "04",
+          "title": "Restore tranquility to mind, body, and spirit",
+          "description": "The ultimate goal of the program is to restore tranquility to the mind, body, and spirit, creating a balanced and peaceful state of being."
+        }
+      ]
+    }
+  ]
+

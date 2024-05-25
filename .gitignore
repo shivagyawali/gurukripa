@@ -1,0 +1,28 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore client-side dependencies
+client/node_modules/
+
+# Ignore server-side dependencies
+server/node_modules/
+server/.env
+server/license.txt
+server/exports
+server/.strapi
+server/dist
+server/build
+server/.strapi-updater.json
+# Ignore built frontend files
+client/dist/
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*

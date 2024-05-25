@@ -1,0 +1,7 @@
+@media print {
+  #fullName {
+    
+    border: 0rem !important;
+    background-color: #350606 !important; /* Set background color to white */
+  }
+}

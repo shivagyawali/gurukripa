@@ -1,0 +1,37 @@
+name: CD Pipeline
+
+on:
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types:
+      - completed
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: SSH Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            # Pull and run backend Docker container
+            sudo docker pull shivagyawali/guru-kirpa-be:latest
+            sudo docker stop my-strapi-container || true
+            sudo docker rm my-strapi-container || true
+            sudo docker run -d --name my-strapi-container -p 1337:1337 shivagyawali/guru-kirpa-be:latest
+            
+            # Pull and run frontend Docker container 
+            
+            sudo docker pull shivagyawali/guru-kirpa-fe:latest
+            sudo docker stop my-guru-kripa-fe-container || true
+            sudo docker rm my-guru-kripa-fe-container || true
+            sudo docker run -d --name my-guru-kripa-fe-container -p 8081:80 shivagyawali/guru-kirpa-fe:latest
+            sudo docker cp  my-strapi-container:/var/www/gurukripanepal  /var/www/

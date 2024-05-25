@@ -1,0 +1,84 @@
+{
+  "clients": [
+    {
+      "image": "./img/clients/annapurna.png",
+      "alt": "Annapurna",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "https://www.carlogos.org/car-logos/nissan-logo-2013-700x700.png",
+      "alt": "Nissan",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/nmb.png",
+      "alt": "NMB Bank",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/gbbl.png",
+      "alt": "GBBL",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/fass.png",
+      "alt": "Fass",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/2560px-Toyota.svg.png",
+      "alt": "Toyota",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/delish.png",
+      "alt": "Delish",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "http://pokharanoodles.com.np/images/logo.png",
+      "alt": "Pokhara Noodles",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/cd.png",
+      "alt": "CD",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/cgfoods.png",
+      "alt": "CG Foods",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/baltra.png",
+      "alt": "Baltra",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "https://www.tvsmotor.com/-/media/Feature/Header/tvs-logo.png?h=28&w=153&la=en&hash=81FC665387EC969333303505CD210311",
+      "alt": "TVS",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "https://www.patanjaliayurved.net/assets/img/logo-big.png",
+      "alt": "Patanjali",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/vishalpipes.png",
+      "alt": "Vishal Pipes",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "/img/clients/savari.png",
+      "alt": "Savari",
+      "link": "javascript:void(0)"
+    },
+    {
+      "image": "https://www.aayamforce.com/wp-content/uploads/2021/03/force-logo.png",
+      "alt": "Force",
+      "link": "javascript:void(0)"
+    }
+  ]
+}

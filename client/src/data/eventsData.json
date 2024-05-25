@@ -1,0 +1,31 @@
+
+[
+  {
+    "type": "News",
+    "title": "Guru Sadhana – Embracing Divine Wisdom",
+    "description": "Guru Sadhana, our foundational spiritual practice, serves as a gateway to divine wisdom. Through sacred rituals and teachings, immerse yourself in the profound energy of spiritual masters, fostering a deep connection with your inner self.",
+    "image": "/news/1.png",
+    "link": "https://www.facebook.com/photo?fbid=873280541088051&set=a.574403974309044"
+  },
+  {
+    "type": "News",
+    "title": "Aura Meditation – A Symphony of Energies",
+    "image": "/news/2.png",
+    "description": "Embark on a mystical journey with Aura Meditation, a symphony of energies that harmonize your spiritual and physical being. This practice, designed to cleanse and strengthen your aura, acts as a gateway to heightened states of consciousness and holistic well-being.",
+    "link": "/matches"
+  },
+  {
+    "type": "Update",
+    "title": "Samriddhi Sadhana – Unveiling Abundance",
+    "image": "/news/3.png",
+    "description": "Unlock the gates to spiritual prosperity with Samriddhi Sadhana. Delve into the sacred teachings that align your energies with the universal flow of abundance, inviting prosperity and fulfillment into every facet of your life.",
+    "link": "/matches"
+  },
+   {
+     "type": "Update",
+     "title": "Samriddhi Sadhana – Unveiling Abundance",
+     "image": "/news/4.png",
+     "description": "Unlock the gates to spiritual prosperity with Samriddhi Sadhana. Delve into the sacred teachings that align your energies with the universal flow of abundance, inviting prosperity and fulfillment into every facet of your life.",
+     "link": "/matches"
+   }
+]

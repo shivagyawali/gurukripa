@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "name": "Suraj Darai Magar",
+    "role": "Batsman",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm medium",
+    "image": "/news/3.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Bikash Shrestha",
+    "role": "Bowler",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm medium",
+    "image": "/players/bikas.png"
+  },
+  {
+    "id": 3,
+    "name": "Arjun Raymajhi",
+    "role": "Batsman",
+    "battingStyle": "Left-handed",
+    "bowlingStyle": "Left-arm diagonal",
+    "image": "/players/arjun.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Khom Pandey",
+    "role": "Batsman",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm off spin",
+    "image": "/players/khom.png"
+  },
+  {
+    "id": 5,
+    "name": "Rohit Singh Rajput",
+    "role": "Bowler",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm medium",
+    "image": "/players/rohit-rj.png"
+  },
+
+  {
+    "id": 6,
+    "name": "Shiva Gyawali",
+    "role": "Bowler",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm medium",
+    "image": "/players/shiva.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "Suman Raj Pandey",
+    "role": "Batsman",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm off spin",
+    "image": "/players/suman-pd.png"
+  },
+  {
+    "id": 8,
+    "name": "Roshan Gautam",
+    "role": "Batsman",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm off spin",
+    "image": "/players/roshan.png"
+  },
+  {
+    "id": 9,
+    "name": "Kritiman Dhakal Santos",
+    "role": "Bowler",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm medium",
+    "image": "/players/kritiman.png"
+  },
+  {
+    "id": 10,
+    "name": "Rahul Bhattarai",
+    "role": "Batsman",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm Leg break",
+    "image": "/players/rahul.png"
+  },
+  {
+    "id": 11,
+    "name": "Rohit Wagle",
+    "role": "Batsman",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm medium",
+    "image": "/players/rohit.png"
+  },
+  {
+    "id": 12,
+    "name": "Suraj Khadka",
+    "role": "Bowler",
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm Leg spin",
+    "image": "/players/chente.png"
+  }
+]
