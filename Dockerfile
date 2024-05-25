@@ -38,7 +38,12 @@ RUN npm run build
 # Ensure public/uploads directory exists
 RUN mkdir -p /usr/src/app/server/public/uploads
 
-# Copy frontend build to the backend public directory
+WORKDIR /var/www/gurukripanepal
+
+# Ensure the directory is clean before copying new files
+RUN rm -rf /var/www/gurukripanepal/*
+
+# Copy the build files from the frontend-builder stage
 COPY --from=frontend-builder /usr/src/app/client/dist /var/www/gurukripanepal
 
 # Expose port 1337 for the Strapi server
