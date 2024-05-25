@@ -13,6 +13,11 @@ server/.strapi
 server/dist
 server/build
 server/.strapi-updater.json
+
+# Ensure public directory is not ignored
+!server/public/
+!server/public/uploads/
+
 # Ignore built frontend files
 client/dist/
 
