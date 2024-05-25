@@ -155,7 +155,7 @@ const ThirdEyeRegistrationForm = () => {
             <br />
             Udayapur, Gaighat
             <br />
-            Mantra sadhana/inner healing
+            Mantra sadhana/Inner healing
           </h1>
 
           <div className="relative h-24 w-24 border border-black flex items-center justify-center">

@@ -72,7 +72,7 @@ const [selectedImage, setSelectedImage] = useState(null);
                           Register
                         </p>
                         <p className="text-xs font-semibold text-gray-900">
-                          Inner Healing
+                          Mantra sadhana/Inner healing
                         </p>
                       </div>
                     </a>
