@@ -22,6 +22,18 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           script: |
+            # Remove all Docker containers
+            docker rm -f $(docker ps -aq) || true
+
+            # Remove all Docker images
+            docker rmi -f $(docker images -q) || true
+
+            # Remove all Docker volumes
+            docker volume rm $(docker volume ls -q) || true
+
+            # Remove all Docker networks
+            docker network rm $(docker network ls -q) || true
+
             # Pull and run backend Docker container
             sudo docker pull shivagyawali/guru-kirpa-be:latest
             sudo docker stop my-strapi-container || true
