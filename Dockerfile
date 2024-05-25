@@ -5,8 +5,6 @@ WORKDIR /usr/src/app/client
 
 RUN rm -rf *
 
-WORKDIR /usr/src/app/client
-
 # Copy frontend files
 COPY ./client .
 
@@ -27,8 +25,6 @@ COPY ./server .
 # Copy environment configuration from server folder to server folder .env file
 COPY ./server/.env.example .env
 
-WORKDIR /usr/src/app/server
-
 # Set NODE_OPTIONS environment variable to increase memory limit
 ENV NODE_OPTIONS="--max-old-space-size=8096"
 
@@ -39,12 +35,17 @@ RUN npm install sharp
 # Build the backend
 RUN npm run build
 
-RUN rm -rf /var/www/gurukripanepal
+# Ensure public/uploads directory exists
+RUN mkdir -p /usr/src/app/server/public/uploads
 
+# Copy frontend build to the backend public directory
 COPY --from=frontend-builder /usr/src/app/client/dist /var/www/gurukripanepal
+
+# Copy uploaded files from the uploads directory to the backend public/uploads directory
+COPY /etc/uploads /usr/src/app/server/public/uploads
 
 # Expose port 1337 for the Strapi server
 EXPOSE 1337
 
-# Start the Strapi application with pm2
+# Start the Strapi application
 CMD ["npm", "run", "start"]
