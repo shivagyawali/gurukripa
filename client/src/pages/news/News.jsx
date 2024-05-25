@@ -47,7 +47,7 @@ const News = () => {
                   {event?.attributes?.title}
                 </h3>
                 <img
-                  src={`${API}${event?.attributes?.image?.data?.attributes?.url}`}
+                  src={`${item?.attributes?.image?.data?.attributes?.url}`}
                   onError={(e) => {
                     e.target.src =
                       "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png";
@@ -55,7 +55,7 @@ const News = () => {
                   alt=""
                   className="w-full h-58 mb-4 rounded-md object-cover"
                 />
-               
+
                 <EventDescription event={event} />
               </div>
             ))}

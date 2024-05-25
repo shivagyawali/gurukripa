@@ -46,7 +46,7 @@ const GallerySection = () => {
           >
             <img
               src={
-                `${API}` + i?.attributes?.image?.data?.attributes?.url ||
+                 i?.attributes?.image?.data?.attributes?.url ||
                 "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
               }
               alt={`Image ${index + 1}`}
@@ -59,7 +59,7 @@ const GallerySection = () => {
                   className="bg-white text-gray-800 px-6 py-3 rounded-full hover:bg-gray-200 transition-bg duration-300"
                   onClick={() =>
                     openModal(
-                      `${API}` + i?.attributes?.image?.data?.attributes?.url
+                      item?.attributes?.image?.data?.attributes?.url
                     )
                   }
                 >
