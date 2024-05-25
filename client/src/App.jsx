@@ -25,7 +25,7 @@ const App = () => {
             element={<PermanentRegistrationForm />}
           />
           <Route
-            path="/third-eye-register"
+            path="/inner-healing"
             element={<ThirdEyeRegistrationForm />}
           />
 

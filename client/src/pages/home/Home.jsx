@@ -63,7 +63,7 @@ const [selectedImage, setSelectedImage] = useState(null);
                     <div className="image">
                       <img src="/img/third-eye.png" className="h-6 w-6" />
                     </div>
-                    <a href="third-eye-register">
+                    <a href="inner-healing">
                       <div className="text">
                         <p
                           className="text-xs text-gray-600"
@@ -72,7 +72,7 @@ const [selectedImage, setSelectedImage] = useState(null);
                           Register
                         </p>
                         <p className="text-xs font-semibold text-gray-900">
-                          Third Eye Meditation
+                          Inner Healing
                         </p>
                       </div>
                     </a>

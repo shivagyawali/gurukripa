@@ -110,7 +110,7 @@ const ThirdEyeRegistrationForm = () => {
       formDataToSend.append("file", pdfData.pdfDataUri);
       formDataToSend.append("fileName", pdfData.pdfFileName);
       formDataToSend.append("personName", formData.fullName);
-      formDataToSend.append("subject", "Third Eye Meditation सदस्यता फारम");
+      formDataToSend.append("subject", "Inner Healing सदस्यता फारम");
 
       for (let key in formData) {
         formDataToSend.append(key, formData[key]);
@@ -139,13 +139,11 @@ const ThirdEyeRegistrationForm = () => {
           </div>
           {/* Organization Name */}
           <h1 className="text-xl flex-grow text-center text-gray-700">
-            <span className="font-bold text-2xl">
-              Guru Kripa Foundation(1st level)
-            </span>
+            <span className="font-bold text-2xl">Guru Kripa Foundation</span>
             <br />
             Udayapur, Gaighat
             <br />
-            Third Eye Meditation
+            Inner Healing
           </h1>
 
           <div className="relative h-24 w-24 border border-black flex items-center justify-center">
@@ -323,23 +321,7 @@ const ThirdEyeRegistrationForm = () => {
               onChange={handleChange}
             />
           </div>
-          <div className="mb-8">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="mobileNo"
-            >
-              Health problem (if any) (स्वास्थ्य समस्या - यदि कुनै)
-            </label>
-            <textarea
-              type="text"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-transparent"
-              id="problem"
-              name="problem"
-              value={formData.problem}
-              rows={4}
-              onChange={handleChange}
-            ></textarea>
-          </div>
+
           <div className="mb-8">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -387,6 +369,23 @@ const ThirdEyeRegistrationForm = () => {
               value={formData.emeRelation}
               onChange={handleChange}
             />
+          </div>
+          <div className="mb-8">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="mobileNo"
+            >
+              Health problem (if any) (स्वास्थ्य समस्या - यदि कुनै)
+            </label>
+            <textarea
+              type="text"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-transparent"
+              id="problem"
+              name="problem"
+              value={formData.problem}
+              rows={4}
+              onChange={handleChange}
+            ></textarea>
           </div>
         </div>
       </div>
