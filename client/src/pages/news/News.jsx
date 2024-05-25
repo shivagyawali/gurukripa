@@ -1,32 +1,27 @@
-import { useEffect, useState } from 'react'
-import { getAllFacebookPosts } from '../../helper/newsApi';
-import Loading from '../../components/micro/Loading';
-import EventDescription from '../../components/micro/EventDescription';
+import { useEffect, useState } from "react";
+import { getAllFacebookPosts } from "../../helper/newsApi";
+import Loading from "../../components/micro/Loading";
+import EventDescription from "../../components/micro/EventDescription";
 import events from "../../data/eventsData.json";
-import { API } from '../../helper/api';
+import { imageUrl } from "../../helper/imageUrl";
 const News = () => {
+  const [eventsData, setEventsData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-   const [eventsData, setEventsData] = useState([]);
-   const [loading, setLoading] = useState(true);
+  const fetchPosts = async () => {
+    try {
+      const data = await getAllFacebookPosts();
+      setEventsData(data.data);
+    } catch (error) {
+      setEventsData(events);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-   const fetchPosts= async () => {
-     try {
-       const data = await getAllFacebookPosts();
-      
-         setEventsData(data.data);
-        
-     } catch (error) {
-       
-       setEventsData(events);
-     } finally {
-       setLoading(false);
-     }
-   };
-
-   useEffect(() => {
-     fetchPosts();
-   }, []);
-
+  useEffect(() => {
+    fetchPosts();
+  }, []);
 
   return (
     <div>
@@ -47,7 +42,7 @@ const News = () => {
                   {event?.attributes?.title}
                 </h3>
                 <img
-                  src={`${event?.attributes?.image?.data?.attributes?.url}`}
+                  src={imageUrl(event)}
                   onError={(e) => {
                     e.target.src =
                       "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png";
@@ -64,6 +59,6 @@ const News = () => {
       </div>
     </div>
   );
-}
+};
 
-export default News
+export default News;

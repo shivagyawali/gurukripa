@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { getPhotos } from "../../../helper/galleryApi";
 import { API } from "../../../helper/api";
+import { imageUrl } from "../../../helper/imageUrl";
 
 Modal.setAppElement("#root");
 
@@ -59,7 +60,7 @@ const GallerySection = () => {
                   className="bg-white text-gray-800 px-6 py-3 rounded-full hover:bg-gray-200 transition-bg duration-300"
                   onClick={() =>
                     openModal(
-                      item?.attributes?.image?.data?.attributes?.url
+                      imageUrl(i)
                     )
                   }
                 >
