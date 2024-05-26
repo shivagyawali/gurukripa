@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import programs from "../../data/programs.json";
 import { getAllPrograms } from '../../helper/programApi';
 import { API } from '../../helper/api';
+import { imageUrl } from '../../helper/imageUrl';
 const Program = () => {
   const [data, setdata] = useState([]);
 
@@ -43,7 +44,7 @@ const Program = () => {
                 <hr className="h-1 bg-subbrand items-center justify-center w-48 rounded-full mx-auto md:mx-0" />
                 <p className="item-center justify-center">
                   <img
-                    src={`${item?.attributes?.image?.data?.attributes?.url}`}
+                    src={imageUrl(item)}
                     onError={(e) => {
                       e.target.src =
                         "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png";
