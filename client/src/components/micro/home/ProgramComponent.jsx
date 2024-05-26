@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getAllPrograms } from '../../../helper/programApi';
 import { API } from '../../../helper/api';
+import { imageUrl } from '../../../helper/imageUrl';
 const ProgramComponent = () => {
   const [data, setdata] = useState([]);
 
@@ -45,7 +46,7 @@ const ProgramComponent = () => {
                   <hr className="h-1 bg-subbrand items-center justify-center w-48 rounded-full mx-auto md:mx-0" />
                   <p className="item-center justify-center">
                     <img
-                      src={`${API}${item?.attributes?.image?.data?.attributes?.url}`}
+                      src={imageUrl(item)}
                       onError={(e) => {
                         e.target.src =
                           "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png";
@@ -88,7 +89,7 @@ const ProgramComponent = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                   <div className="relative z-10 inline-block pt-11 lg:pt-0">
                     <img
-                      src={`${API}${item?.attributes?.image?.data?.attributes?.url}`}
+                      src={imageUrl(item)}
                       onError={(e) => {
                         e.target.src =
                           "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png";
