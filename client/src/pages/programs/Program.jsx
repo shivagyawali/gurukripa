@@ -9,7 +9,7 @@ const Program = () => {
   const fetchData = async () => {
     try {
       const result = await getAllPrograms();
-      console.log(JSON.stringify(result.data));
+
       setdata(result.data);
     } catch (error) {
       setdata(programs);
@@ -87,7 +87,7 @@ const Program = () => {
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="relative z-10 inline-block pt-11 lg:pt-0">
                   <img
-                    src={`${API}${item?.attributes?.image?.data?.attributes?.url}`}
+                    src={imageUrl(item)}
                     onError={(e) => {
                       e.target.src =
                         "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png";
