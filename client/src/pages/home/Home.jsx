@@ -72,7 +72,7 @@ const [selectedImage, setSelectedImage] = useState(null);
                           Register
                         </p>
                         <p className="text-xs font-semibold text-gray-900">
-                          chakra healing
+                          Chakra Healing
                         </p>
                       </div>
                     </a>
