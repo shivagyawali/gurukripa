@@ -7,14 +7,14 @@ on:
       - completed
 
 jobs:
-  build-and-deploy:
+  deploy-backend:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: SSH Deploy
+      - name: SSH Deploy Backend
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
@@ -22,28 +22,36 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           script: |
-            # Remove all Docker containers
-            docker rm -f $(docker ps -aq) || true
-
-            # Remove all Docker images
-            docker rmi -f $(docker images -q) || true
-
-            # Remove all Docker volumes
-            docker volume rm $(docker volume ls -q) || true
-
-            # Remove all Docker networks
-            docker network rm $(docker network ls -q) || true
+            # Clean up old backend container
+            docker stop my-strapi-container || true
+            docker rm my-strapi-container || true
 
             # Pull and run backend Docker container
-            sudo docker pull shivagyawali/guru-kirpa-be:latest
-            sudo docker stop my-strapi-container || true
-            sudo docker rm my-strapi-container || true
-            sudo docker run -d --name my-strapi-container -p 1337:1337 shivagyawali/guru-kirpa-be:latest
-            
+            docker pull shivagyawali/guru-kirpa-be:latest
+            docker run -d --name my-strapi-container -p 1337:1337 shivagyawali/guru-kirpa-be:latest
+
+  deploy-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: SSH Deploy Frontend
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            # Clean up old frontend container
+            docker stop my-guru-kripa-fe-container || true
+            docker rm my-guru-kripa-fe-container || true
+
             # Pull and run frontend Docker container 
-            
-            sudo docker pull shivagyawali/guru-kirpa-fe:latest
-            sudo docker stop my-guru-kripa-fe-container || true
-            sudo docker rm my-guru-kripa-fe-container || true
-            sudo docker run -d --name my-guru-kripa-fe-container -p 8081:80 shivagyawali/guru-kirpa-fe:latest
-            sudo docker cp  my-strapi-container:/var/www/gurukripanepal  /var/www/
+            docker pull shivagyawali/guru-kirpa-fe:latest
+            docker run -d --name my-guru-kripa-fe-container -p 8081:80 shivagyawali/guru-kirpa-fe:latest
+
+            # Copy necessary files from backend container
+            docker cp my-strapi-container:/var/www/gurukripanepal /var/www/
