@@ -1,5 +1,4 @@
-
-const colors = require("tailwindcss/colors");
+import colors from "tailwindcss/colors";
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
@@ -7,8 +6,8 @@ module.exports = {
     extend: {
       colors: {
         cyan: colors.cyan,
-        "primary": "#FFC629",
-        "dark": "#ce9700",
+        primary: "#FFC629",
+        dark: "#ce9700",
       },
       fontFamily: {
         body: ["Poppins"],
