@@ -63,6 +63,7 @@ const [selectedImage, setSelectedImage] = useState(null);
                     <div className="image">
                       <img src="/img/third-eye.png" className="h-6 w-6" />
                     </div>
+                    
                     <a href="inner-healing">
                       <div className="text">
                         <p
