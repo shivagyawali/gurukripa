@@ -9,6 +9,7 @@ RUN rm -rf *
 COPY ./client .
 
 # Install frontend dependencies
+
 RUN npm install
 
 # Build the frontend
