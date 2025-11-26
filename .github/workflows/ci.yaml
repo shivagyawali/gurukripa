@@ -52,7 +52,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           script: |
-            echo "Stopping old frontend container..."
             docker stop my-guru-kripa-fe-container || true
             docker rm my-guru-kripa-fe-container || true
 
