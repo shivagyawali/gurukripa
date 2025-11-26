@@ -1,93 +1,115 @@
 import React, { useEffect, useState } from "react";
-import Modal from "react-modal";
 import { getPhotos } from "../../../helper/galleryApi";
-import { API } from "../../../helper/api";
 import { imageUrl } from "../../../helper/imageUrl";
 
-Modal.setAppElement("#root");
+// Only Swiper inside the modal
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Keyboard } from "swiper/modules";
+import "swiper/css";
 
 const GallerySection = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [data, setdata] = useState([]);
-
-  const fetchData = async () => {
-    try {
-      const result = await getPhotos();
-      setdata(result.data);
-    } catch (error) {
-      //setdata(goal);
-    }
-  };
-  const openModal = (imageIndex) => {
-    setSelectedImage(imageIndex);
-  };
-
-  const closeModal = () => {
-    setSelectedImage(null);
-  };
-  console.log(selectedImage);
+  const [images, setImages] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await getPhotos();
+        const formatted = res.data.map((item) => ({
+          src:
+            imageUrl(item) ||
+            "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png",
+          title: item.title || "",
+        }));
+        setImages(formatted);
+      } catch (err) {
+        console.log(err);
+      }
+    };
     fetchData();
   }, []);
 
-  return (
-    <div className="container mx-auto my-10">
-      <h2 className="text-4xl font-extrabold mb-8 text-center text-gray-800">
-        Explore Our Gallery
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {data.map((i, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
-          >
-            <img
-              src={
-                imageUrl(i) ||
-                "https://salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png"
-              }
-              alt={`Image ${index + 1}`}
-              className="w-full h-96 object-cover object-center p-2 rounded-2xl"
-            />
-            {selectedImage !== null ||
-              (selectedImage !== undefined && (
-                <div className="absolute inset-0 bg-black opacity-0 hover:opacity-70 transition-opacity duration-300">
-                  <div className="flex items-center justify-center h-full">
-                    <button
-                      className="bg-white text-gray-800 px-6 py-3 rounded-full hover:bg-gray-200 transition-bg duration-300"
-                      onClick={() => openModal(imageUrl(i))}
-                    >
-                      View Details
-                    </button>
-                  </div>
-                </div>
-              ))}
-          </div>
-        ))}
-      </div>
+  const openLightbox = (index) => {
+    setStartIndex(index);
+    setModalOpen(true);
+  };
 
-      {selectedImage !== null ||
-        (selectedImage !== undefined && (
-          <Modal
-            isOpen={selectedImage !== null}
-            onRequestClose={closeModal}
-            contentLabel="View Image"
-            style={{ zIndex: 10000000000000 }}
+  return (
+    <>
+      {/* YOUR ORIGINAL GRID — CLEAN & PERFECT */}
+      <section className="py-12 px-8">
+        <div className="max-w-8xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-900">
+            Explore Our Gallery
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {images.map((img, i) => (
+              <div
+                key={i}
+                onClick={() => openLightbox(i)}
+                className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-2xl cursor-pointer transition-all duration-500"
+              >
+                <img
+                  src={img.src}
+                  alt={img.title}
+                  className="w-full h-64 md:h-80 object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                  <span className="text-white text-lg font-medium tracking-wider">
+                    View Image
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FULLSCREEN LIGHTBOX — NO MODAL, NO #ROOT, PURE CSS */}
+      {modalOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+          onClick={() => setModalOpen(false)}
+        >
+          {/* Close on background click */}
+          <button
+            className="absolute top-8 right-8 text-white text-6xl font-thin hover:text-gray-400 transition cursor-pointer"
+            onClick={() => setModalOpen(false)}
           >
-            <button onClick={closeModal} className="text-red-500 text-2xl">
-              Close
-            </button>
-            {selectedImage !== null && (
-              <img
-                src={selectedImage}
-                alt={`Image ${selectedImage + 1}`}
-                className="w-full h-full object-contain "
-              />
-            )}
-          </Modal>
-        ))}
-    </div>
+            ×
+          </button>
+
+          {/* Swiper Lightbox */}
+          <Swiper
+            initialSlide={startIndex}
+            modules={[Navigation, Keyboard]}
+            navigation={{
+              prevEl: ".lb-prev",
+              nextEl: ".lb-next",
+            }}
+            keyboard={{ enabled: true }}
+            loop={true}
+            grabCursor={true}
+            className="w-full h-full"
+          >
+            {images.map((img, i) => (
+              <SwiperSlide key={i}>
+                <div className="flex items-center justify-center h-full px-10">
+                  <img
+                    src={img.src}
+                    alt={img.title}
+                    className="max-w-full max-h-full object-contain"
+                    onClick={(e) => e.stopPropagation()} // prevent close when clicking image
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      )}
+    </>
   );
 };
 
